@@ -1,0 +1,295 @@
+/* Variables pour les couleurs et polices principales */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --header-background-color: #ffffff;
+  --card-background-color: #ffffff;
+  --header-shadow-color: rgba(0, 0, 0, 0.1);
+  --card-shadow-color: rgba(0, 0, 0, 0.2);
+  --font-stack: 'Arial', sans-serif;
+  --google-font: 'Bebas Neue', cursive;
+}
+
+/* Reset CSS pour uniformiser les styles sur les navigateurs */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  text-decoration: none;
+  list-style: none;
+}
+
+body, html {
+  font-family: var(--font-stack);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--header-background-color);
+  box-shadow: 0 2px 4px var(--header-shadow-color);
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1em 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+header nav a:hover, header nav a:focus {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Section Mon CV */
+.mon-cv {
+  text-align: center;
+  margin: 5em 20px 12em;
+  padding: 2em 1em;
+}
+
+.mon-cv img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  border: 4px solid var(--primary-color);
+}
+
+.mon-cv h1 {
+  font-family: var(--google-font);
+  font-size: 2.5em;
+  color: var(--text-color);
+  margin: 18px ;
+}
+
+.mon-cv p {
+  font-size: 1.2em;
+  color: var(--text-color);
+}
+
+/* Introduction Section */
+.introduction {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: var(--background-color);
+  margin-bottom: 2em;
+}
+
+.introduction h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.introduction p {
+  font-size: 1.2em;
+  color: var(--text-color);
+}
+
+/* Carousel Section */
+.carousel-container {
+  padding: 2em 1em;
+  margin-top: 6em;
+  background: var(--background-color);
+}
+
+
+
+.carousel-container h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: var(--primary-color);
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel div {
+  flex: 0 0 calc(33.333% - 20px);
+  background-color: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--card-shadow-color);
+  padding: 1.5em;
+  scroll-snap-align: start;
+  transition: transform 0.3s;
+}
+
+.carousel div:hover {
+  transform: translateY(-10px);
+}
+
+.carousel h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: var(--secondary-color);
+}
+
+.carousel p {
+  margin-bottom: 1em;
+  color: var(--text-color);
+}
+
+.carousel ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.carousel ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-color);
+}
+
+.carousel ul li i {
+  color: var(--secondary-color);
+}
+
+/* Projects Section */
+.projects {
+  padding: 2em 1em;
+  background-color: var(--header-background-color);
+  margin-bottom: 2em;
+}
+
+.project-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--card-shadow-color);
+  padding: 1.5em;
+  text-align: center;
+  width: calc(33.333% - 20px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.project-card h3 {
+  font-size: 1.5em;
+  color: var(--secondary-color);
+}
+
+.project-card p {
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.project-card .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Testimonials Section */
+.testimonials {
+  text-align: center;
+  padding: 2em 1em;
+  background: var(--background-color);
+}
+
+.testimonial-carousel blockquote {
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin-bottom: 1em;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1em;
+}
+
+.testimonial-carousel cite {
+  display: block;
+  font-size: 1em;
+  color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 780px) {
+  .formation .carousel-container,
+  .experience .carousel-container,
+  .competences .carousel-container {
+    margin: 0;
+    padding: 1em;
+    margin-top: 1em;
+    background: var(--background-color);
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+  }
+
+  .mon-cv img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .carousel div {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    flex-wrap: wrap;
+  }
+
+  .mon-cv img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .carousel div {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
