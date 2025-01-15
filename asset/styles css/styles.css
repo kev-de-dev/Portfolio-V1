@@ -1,0 +1,393 @@
+/* Variables for main colors and fonts */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --header-background-color: #ffffff;
+  --card-background-color: #ffffff;
+  --header-shadow-color: rgba(0, 0, 0, 0.1);
+  --card-shadow-color: rgba(0, 0, 0, 0.2);
+  --font-stack: "Arial", sans-serif;
+  --google-font: "Bebas Neue", cursive;
+}
+
+/* Reset CSS for uniform styling across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  text-decoration: none;
+  list-style: none;
+}
+
+body,
+html {
+  font-family: var(--font-stack);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+/* Header */
+header {
+  background-color: var(--header-background-color);
+  box-shadow: 0 2px 4px var(--header-shadow-color);
+  padding: 1em 0;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+header nav a:hover,
+header nav a:focus {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* CV Section */
+.mon-cv {
+  text-align: center;
+  margin: 5em auto 2em;
+}
+
+.mon-cv img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1em;
+  border: 1.5px solid var(--primary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mon-cv img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+  border-color: var(--secondary-color); /* Change border color dynamically */
+}
+.mon-cv h1 {
+  font-family: var(--google-font);
+  font-size: 2.5em;
+  color: var(--text-color);
+}
+
+.mon-cv p {
+  font-size: 1.2em;
+  color: var(--text-color);
+}
+
+/* Introduction */
+.introduction {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: var(--background-color);
+  margin-bottom: 2em;
+}
+
+.introduction h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.introduction p {
+  font-size: 1.2em;
+  color: var(--text-color);
+}
+
+/* Carousel */
+.carousel-container {
+  padding: 3em;
+  margin: 3em auto;
+  background: var(--background-color);
+}
+
+.carousel-container h2 {
+  text-align: center;
+  font-size: 2em;
+  color: var(--primary-color);
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 1rem;
+
+  scroll-snap-type: x mandatory;
+  padding: 0.5em;
+}
+
+.carousel div {
+  flex: 0 0 calc(33.333% - 20px);
+  align-items: center;
+  background: rgba(65, 63, 63, 0.025);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px var(--card-shadow-color);
+  padding: 1.5em;
+  margin: 4px;
+  min-height: 500px;
+  overflow-y: auto; /* Ajouté pour permettre le défilement vertical */
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  transition: transform 0.3s;
+}
+
+.carousel div p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.carousel div:hover {
+  transform: translateY(-10px);
+}
+
+.carousel h3 {
+  font-size: 1.5em;
+  color: var(--secondary-color);
+}
+
+.carousel p {
+  color: var(--text-color);
+}
+
+.carousel ul {
+  margin-bottom: 10px;
+}
+.carousel ul li {
+  color: var(--primary-color);
+}
+
+.carousel ul li i {
+  color: var(--secondary-color);
+}
+main {
+  max-width: calc(
+    100vw - 20px
+  ); /* Hauteur fixe pour uniformiser toutes les cartes */
+}
+
+/* Projects */
+.projects {
+  padding: 2em 1em;
+}
+
+/* Projets */
+.project-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: calc(
+    100vw - 10px
+  ); /* Hauteur fixe pour uniformiser toutes les cartes */
+  max-height: calc(100vh - 10px);
+}
+
+.project-card {
+  width: 33%;
+  background: var(--card-background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--card-shadow-color);
+  padding: 1.5em;
+  text-align: center;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Répartir le contenu */
+  overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+.project-card img {
+  width: 100%; /* Prend toute la largeur de la carte */
+  height: 150px; /* Hauteur fixe pour les images */
+  object-fit: cover; /* Remplit l'espace sans déformer l'image */
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.project-card h3 {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.project-card p {
+  font-size: 0.9em; /* Taille légèrement réduite pour s'adapter */
+  line-height: 1.4;
+  color: var(--text-color);
+  margin-bottom: 1em;
+  overflow: hidden; /* Empêche le débordement */
+  text-overflow: ellipsis; /* Affiche "..." si le texte dépasse */
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+}
+.carousel::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.project-card .btn {
+  padding: 0.5em 1em;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: auto; /* Aligne le bouton en bas de la carte */
+}
+
+.project-card .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.project-card .btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.testimonial-carousel blockquote {
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin-bottom: 1em;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1em;
+}
+.carousel-container {
+  /* Largeur fixe */
+  min-height: 400px; /* Hauteur fixe */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-carousel cite {
+  color: var(--secondary-color);
+}
+/* Formulaire de contact */
+#contact {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: var(--background-color);
+}
+.contact h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+#contact-form {
+  max-width: 600px;
+  margin: 2em auto;
+  padding: 1.5em;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+  color: #333;
+  font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+#contact-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#contact-form input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  header nav ul {
+    flex-wrap: wrap;
+  }
+  .carousel-container {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .carousel {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    padding: 0;
+  }
+  .carousel div {
+    color: var(--primary-color);
+    margin: 10px;
+  }
+
+  .mon-cv img {
+    width: 120px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}

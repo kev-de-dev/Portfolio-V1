@@ -1,0 +1,12 @@
+Portfolio V1/
+├── index.html
+├── asset/
+│   ├── styles css/
+│   │   └── styles.css
+│   ├── html/
+│   │   └── Competence.html
+│   └── srcipt.js
+├── __tests__/
+│   └── srcipt.test.js
+├── jest.config.js
+└── note

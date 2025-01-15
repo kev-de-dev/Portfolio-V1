@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 1em;
+            background-color: #007bff;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon site avec Chatbot</h1>
+    </header>
+
+    <div class="container">
+        <p>Ce site est équipé d'un chatbot interactif pour améliorer votre expérience utilisateur. Vous pouvez poser des questions ou demander de l'aide en temps réel.</p>
+        <p>Le chatbot se chargera automatiquement dans quelques secondes.</p>
+    </div>
+
+    <!-- Integration du chatbot -->
+    <iframe 
+        src="https://cdn.botpress.cloud/webchat/v2.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/01/04/14/20250104141027-51I007M5.json"
+        style="width: 100%; height: 500px; border: none;" 
+        allow="microphone; camera">
+    </iframe>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/04/14/20250104141027-PNQ66JTF.js"></script>
+</body>
+</html>
