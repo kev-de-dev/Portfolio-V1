@@ -262,8 +262,10 @@ main {
 .project-card .btn:hover {
   background-color: var(--secondary-color);
 }
-
-aside section img {
+ .logo-3d {
+  width: 98%;
+  padding: 5px;
+  margin-bottom: 35px;
   /* Bordures arrondies */
   border-radius: 25px;
   /* Ombre avec relief */
@@ -274,7 +276,7 @@ aside section img {
 }
 
 /* Effet au survol */
-aside section img:hover {
+.logo-3d {
   /* Légère élévation */
   transform: translateY(-10px);
   /* Ombre accentuée */
