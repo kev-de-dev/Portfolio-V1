@@ -263,6 +263,26 @@ main {
   background-color: var(--secondary-color);
 }
 
+aside section img {
+  /* Bordures arrondies */
+  border-radius: 25px;
+  /* Ombre avec relief */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 
+              0 6px 6px rgba(0, 0, 0, 0.2);
+  /* Transition fluide pour les interactions */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol */
+aside section img:hover {
+  /* Légère élévation */
+  transform: translateY(-10px);
+  /* Ombre accentuée */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 
+              0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+
 /* Testimonials */
 .testimonials {
   text-align: center;
