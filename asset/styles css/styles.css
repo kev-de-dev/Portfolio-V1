@@ -14,6 +14,7 @@
 
 /* Reset CSS for uniform styling across browsers */
 * {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,6 +30,11 @@ html {
   line-height: 1.6;
   color: var(--text-color);
   background: var(--background-color);
+}
+body {
+
+margin-left: 2px;
+margin-right: 2px;
 }
 
 /* Header */
